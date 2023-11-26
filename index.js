@@ -119,7 +119,7 @@ $(".rules").click(function () {
 // ------------hurray.html------------
 $('.next').click(sound(),function () {
     window.location.href = "hurray.html";
-    setTimeout(star.play(),2000)
+    setTimeout(star.play(),5000)
 })
 
 $(".play-again").click(sound(),function () {
