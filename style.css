@@ -1,0 +1,283 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --background-color: rgba(137, 193, 94, 1);
+    --primary-font-color: rgba(255, 255, 255, 1);
+    --secondary-font-color: rgba(101, 101, 101, 1);
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    width: 100vw;
+    height: 100vh;
+}
+
+/* ------------score counter----------- */
+.banner {
+    border: 3px solid aliceblue;
+    width: 50vw;
+    height: 150px;
+    margin: auto;
+    position: relative;
+    top: 50px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.title {
+    color: var(--primary-font-color);
+    font-weight: 700;
+    font-size: 2rem;
+    margin: 5px;
+    text-align: left;
+}
+
+.score-counter {
+    display: flex;
+    /* justify-content: space-evenly;  */
+    gap: 10px;
+    text-align: center;
+    /* background-color: rgba(255, 255, 255, 1); */
+    color: var(--secondary-font-color);
+    border-radius: 5px;
+    margin: 2px;
+
+}
+
+.score-counter-box {
+    background-color: var(--primary-font-color);
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 5px;
+}
+
+
+.score {
+    font-size: 3rem;
+    font-weight: 700;
+    color: black;
+}
+
+
+/* ---------home-page-game---------- */
+.game {
+    position: relative;
+    top: 80px;
+    width: 50vw;
+    margin: auto;
+}
+
+.lines {
+    position: relative;
+    left: 35%;
+    top: 60px;
+}
+
+.choose {
+    height: 150px;
+    width: 150px;
+    position: absolute;
+}
+
+.stone {
+    left: 128px;
+}
+
+.paper {
+    top: 160px;
+    left: 240px;
+}
+
+.scissor {
+    right: 128px;
+}
+
+/* ----------game-start-page */
+.reveal-answer {
+   
+
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    text-align: center;
+    color: var(--primary-font-color);
+    font-weight: 700;
+    position: relative;
+    bottom: 150px;
+    visibility: hidden;
+}
+
+.middle {
+    /* margin-top: 100px; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    letter-spacing: 2px;
+}
+
+.reveal-answer img {
+    height: 150px;
+    width: 150px;
+}
+
+/* add */
+.win {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+/* background-color: rgb(21, 200, 116); */
+background-image: url('images/winner-green-bg.png');
+background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+height: 300px;
+width: 300px;
+/* margin: auto; */
+/* margin-top: 100px; */
+/* border-radius: 50%;
+position: relative;
+bottom: 0px;
+right: 10px; */
+/* z-index: -1; */
+}
+
+/* add */
+.picked{
+    position: relative;
+    top: 70px;
+}
+
+
+
+
+/* ------victory page--------- */
+.hurray {
+    width: 50vw;
+    height: 100vh;
+    color: var(--primary-font-color);
+    margin: auto;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    gap: 20px;
+}
+
+.trophy {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 42vw;
+    top: 120px;
+
+}
+
+.hurray h1 {
+    font-weight: 700;
+    font-size: 91px;
+}
+
+.hurray h3 {
+    font-weight: 500;
+    font-size: 35px;
+}
+
+/* --------buttons---------- */
+.btn {
+    /* text-align: center;   */
+    padding: 10px 30px;
+    border: 2px solid black;
+    background-color: transparent;
+    color: white;
+    border-radius: 15px;
+    border-color: var(--primary-font-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: 5px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+
+}
+
+.play-again {
+    padding: 10px 30px;
+    border: none;
+    background-color: var(--primary-font-color);
+    color: rgba(107, 107, 107, 1);
+    border-radius: 5px;
+    border-color: var(--primary-font-color);
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 5px;
+    cursor: pointer;
+    letter-spacing: 10%;
+}
+
+.next {
+    visibility: hidden;
+    
+}
+
+
+/* ------rules board---------- */
+.rules-board {
+    height: 290px;
+    width: 300px;
+    background-color: rgba(0, 68, 41, 1);
+    color: var(--primary-font-color);
+    border: 7px solid rgba(255, 255, 255, 1);
+    position: absolute;
+    right: 20px;
+    bottom: 70px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+h2 {
+    text-align: center;
+}
+
+ul {
+    /* list-style-type:🟨; */
+    /* (U+1F7E8) */
+    list-style-type: '\1F7E8';
+    margin-left: 15px;
+    font-size: small;
+    font-weight: lighter;
+    color: rgb(224, 224, 224);
+}
+
+li {
+    margin: 8px;
+}
+
+.close-btn {
+    background-color: transparent;
+    border-style: none;
+    cursor: pointer;
+    /* height: 10px; */
+    width: 45px;
+    position: absolute;
+    right: -10px;
+    bottom: 15.75rem;
+}
+
+.hurray-r {
+    visibility: hidden;
+}

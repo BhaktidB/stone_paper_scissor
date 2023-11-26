@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rock-paper-scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="banner">
+        <div class="title">
+            <p>ROCK</p>
+            <p>PAPER</p>
+            <p>SCISSORS</p>
+        </div>
+
+        <div class="score-counter">
+            <div class="score-counter-box">
+                <p>COMPUTER <br>SCORE</p>
+                <p id="compScore" class="score">0</p>
+            </div>
+            <div class="score-counter-box" style="padding: 10px 25px;">
+                <p>YOUR <br>SCORE</p>
+                <p id="userScore" class="score">0</p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="game">
+        <img class="lines" src="images/lines.png" alt="">
+
+        <img id="stone" class="choose stone" src="images/stone.png" alt="choose stone">
+
+        <img id="scissor" class="choose scissor" src="images/scissor.png" alt="choose scissor">
+
+        <img id="paper" class="choose paper" src="images/paper.png" alt="choose paper">
+
+    </div>
+
+
+
+    <div class="reveal-answer">
+        <div>
+            <p id="user-picked">YOU PICKED</p><br>
+            <div id="user-choose">
+                <img src="images/scissor.png" alt="">
+
+            </div>
+        </div>
+        <div class="middle">
+            <p id="p-win" style="font-size: 40px;">YOU WIN</p>
+            <p>AGAINST PC</p>
+            <button class="play-again">
+                PLAY AGAIN
+            </button>
+        </div>
+        <div>
+            <p id="comp-picked">PC PICKED</p><br>
+            <div id="comp-choose">
+                <img src="images/scissor.png" alt="">
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="rules-board">
+        <button class="close-btn">
+            <img src="images/close.svg" alt="close button" width="100%">
+        </button>
+        <h2>Game Rules</h2>
+        <br>
+        <ul>
+            <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+            <li>Agree ahead of time whether you'll count off “rock, paper, scissors, shoot” or just “rock, paper,
+                scissors.”</li>
+            <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+            <li>If both players lay down the same hand, each player lays down another hand</li>
+        </ul>
+    </div>
+
+
+    <button class="rules btn">
+        RULES
+    </button>
+
+    <button class="next btn">
+        NEXT
+    </button>
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
