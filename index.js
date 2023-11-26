@@ -9,6 +9,7 @@ let computerScore = parseInt(localStorage.getItem('computerScore')) || 0;
 
 function sound() {
     var button = new Audio('./audio/button.mp3')
+    button.preload = 'auto';
     button.play()
 }
 
