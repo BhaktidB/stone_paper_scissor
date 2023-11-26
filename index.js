@@ -7,7 +7,7 @@ let options = ['stone', 'paper', 'scissor']
 let userScore = parseInt(localStorage.getItem('userScore')) || 0;
 let computerScore = parseInt(localStorage.getItem('computerScore')) || 0;
 
-function sound(){
+function sound() {
     var button = new Audio('./audio/button.mp3')
     button.play()
 }
@@ -15,15 +15,11 @@ function sound(){
 var draw = new Audio('./audio/draw.mp3')
 var win = new Audio('./audio/win.mp3')
 var lose = new Audio('./audio/lose.mp3')
-var star = new Audio('./audio/star.mp3')
 
 $('#userScore').text(localStorage.getItem('userScore'))
 $('#compScore').text(localStorage.getItem('computerScore'))
 logic()
 
-
-
-// on clicking any choosen button it should display the winner and loser and play again button
 // hide the game 
 
 $(".choose").click(function () {
@@ -39,11 +35,8 @@ $(".choose").click(function () {
     $('.game').css('visibility', 'hidden')
     $('.reveal-answer').css('visibility', 'visible')
 
-    $('#user-choose img').attr('src','images/'+ userSelection+'.png')
-    $('#comp-choose img').attr('src','images/'+ computerSelection+'.png')
-
-
-
+    $('#user-choose img').attr('src', 'images/' + userSelection + '.png')
+    $('#comp-choose img').attr('src', 'images/' + computerSelection + '.png')
 
 });
 
@@ -68,10 +61,6 @@ function logic() {
         userScore += 1;
         localStorage.setItem('userScore', userScore)
 
-        // console.log(userScore)
-        // localStorage.setItem('userScore',userScore)
-        // localStorage.getItem('userScore')
-        // $('#userScore').text(userScore).localStorage.getItem('userScore')
         $('#userScore').text(localStorage.getItem('userScore'))
 
         $('.next').css({
@@ -87,17 +76,11 @@ function logic() {
         $('#comp-choose').addClass('win')
         computerScore += 1
         localStorage.setItem('computerScore', computerScore)
-        // localStorage.getItem('computerScore')
-        // $('#compScore').text(computerScore).localStorage.getItem('computerScore')
-        // $('#compScore').text(computerScore)
         $('#compScore').text(localStorage.getItem('computerScore'))
-
 
     }
     console.log(`you ${userScore} || computer ${computerScore}`)
 }
-
-//after click display reveal-ans page
 
 
 // close rule button
@@ -117,11 +100,10 @@ $(".rules").click(function () {
 })
 
 // ------------hurray.html------------
-$('.next').click(sound(),function () {
+$('.next').click(sound(), function () {
     window.location.href = "hurray.html";
-    setTimeout(star.play(),5000)
 })
 
-$(".play-again").click(sound(),function () {
+$(".play-again").click(sound(), function () {
     window.location.href = "index.html";
 })
