@@ -16,7 +16,6 @@ var draw = new Audio('./audio/draw.mp3')
 var win = new Audio('./audio/win.mp3')
 var lose = new Audio('./audio/lose.mp3')
 var star = new Audio('./audio/star.mp3')
-star.play()
 
 $('#userScore').text(localStorage.getItem('userScore'))
 $('#compScore').text(localStorage.getItem('computerScore'))
@@ -99,28 +98,6 @@ function logic() {
 }
 
 //after click display reveal-ans page
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // close rule button
