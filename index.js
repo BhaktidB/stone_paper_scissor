@@ -94,17 +94,16 @@ $('.close-btn').click(function () {
 
 // toggle rulebook
 $(".rules").click(function () {
-    sound()
     $('.rules-board').css('visibility', 'visible')
     $('.rules-board').toggle();
     $('.close-btn').show();
 })
 
 // ------------hurray.html------------
-$('.next').click(sound(), function () {
+$('.next').click(function () {
     window.location.href = "hurray.html";
 })
 
-$(".play-again").click(sound(), function () {
+$(".play-again").click(function () {
     window.location.href = "index.html";
 })
