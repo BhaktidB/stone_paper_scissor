@@ -24,7 +24,6 @@ logic()
 // hide the game 
 
 $(".choose").click(function () {
-    sound()
     userSelection = $(this).attr('id');
     console.log('user:', userSelection)
     let randomNum = Math.floor(Math.random() * 3);
