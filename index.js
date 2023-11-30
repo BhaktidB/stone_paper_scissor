@@ -13,7 +13,6 @@ function sound() {
     button.play()
 }
 
-var draw = new Audio('./audio/draw.mp3')
 var win = new Audio('./audio/win.mp3')
 var lose = new Audio('./audio/lose.mp3')
 
@@ -45,7 +44,6 @@ function logic() {
 
     if (userSelection == computerSelection) {
         console.log('draw')
-        draw.play()
         $('#p-win').text('TIE UP');
     } else if (
         (userSelection == 'stone' && computerSelection == 'scissor') ||
